@@ -1,0 +1,260 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Ubah warna latar belakang navbar */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.navbar-title {
+    font-size: 24px;
+    color: #ff0303;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.tab.active,
+.tab:hover {
+    background-color: #555;
+    color: #f1f1f1;
+}
+
+/* Login Form */
+#login-form {
+    display: flex;
+    align-items: center;
+}
+
+#username,
+#password {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#username::placeholder,
+#password::placeholder {
+    color: #ccc;
+}
+
+button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #ff0303;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #cc0000;
+}
+
+/* Content */
+.content {
+    margin-top: 0px;
+    padding: 0px;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+}
+
+.content#tentang {
+    background-color: #08080800;
+    position: relative;
+}
+
+.background-video-container {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.content p {
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+#tentang::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    color: #0c0b0b;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* Formulir Pendaftaran */
+.registration-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+    color: #ff0303;
+    font-size: 24px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="password"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="tel"]:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0303;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #cc0000;
+}
+
+.clock {
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.clock .clock-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.face-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
